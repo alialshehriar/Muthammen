@@ -342,23 +342,7 @@ function App() {
               </div>
             </Card>
 
-            {/* إعلان خريطة الوعي العقاري */}
-            <Card className="mt-8 p-8 bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-200 text-center">
-              <h3 className="text-3xl font-black mb-3">
-                قريبًا: خريطة الوعي العقاري الأولى في المملكة 🇸🇦
-              </h3>
-              <p className="text-lg text-muted-foreground mb-6">
-                استكشف الأسعار، الاتجاهات، والفرص في كل حي بتفاصيل غير مسبوقة
-              </p>
-              <Button 
-                size="lg"
-                onClick={() => navigateTo('referrals')}
-                className="gap-2"
-              >
-                <Users className="w-5 h-5" />
-                افتحها بدعمك المبكر
-              </Button>
-            </Card>
+
           </>
         )}
       </main>

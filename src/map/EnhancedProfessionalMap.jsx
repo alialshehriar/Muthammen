@@ -11,6 +11,7 @@ export default function EnhancedProfessionalMap() {
   const map = useRef(null);
   const [selectedLocation, setSelectedLocation] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [mapStyle, setMapStyle] = useState('satellite-streets');
   const [show3D, setShow3D] = useState(true);
@@ -34,34 +35,49 @@ export default function EnhancedProfessionalMap() {
   useEffect(() => {
     if (map.current) return;
 
-    // Initialize map with enhanced 3D settings
-    map.current = new mapboxgl.Map({
-      container: mapContainer.current,
-      style: styles[mapStyle].url,
-      center: [46.6753, 24.7136], // Riyadh
-      zoom: 11.5,
-      pitch: 60,
-      bearing: -17.6,
-      antialias: true,
-      maxZoom: 20,
-      minZoom: 5,
-      attributionControl: false
-    });
-
-    // Add RTL plugin for proper Arabic text rendering
-    mapboxgl.setRTLTextPlugin(
-      'https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.2.3/mapbox-gl-rtl-text.js',
-      null,
-      true
-    );
-
-    // Add attribution
-    map.current.addControl(new mapboxgl.AttributionControl({
-      compact: true
-    }), 'bottom-left');
-
-    map.current.on('load', () => {
+    // Check if Mapbox token is available
+    if (!mapboxgl.accessToken) {
+      setError('Mapbox token is missing. Please add VITE_MAPBOX_TOKEN to your environment variables.');
       setLoading(false);
+      return;
+    }
+
+    try {
+      // Initialize map with enhanced 3D settings
+      map.current = new mapboxgl.Map({
+        container: mapContainer.current,
+        style: styles[mapStyle].url,
+        center: [46.6753, 24.7136], // Riyadh
+        zoom: 11.5,
+        pitch: 60,
+        bearing: -17.6,
+        antialias: true,
+        maxZoom: 20,
+        minZoom: 5,
+        attributionControl: false
+      });
+
+      // Add RTL plugin for proper Arabic text rendering
+      mapboxgl.setRTLTextPlugin(
+        'https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.2.3/mapbox-gl-rtl-text.js',
+        null,
+        true
+      );
+
+      // Add attribution
+      map.current.addControl(new mapboxgl.AttributionControl({
+        compact: true
+      }), 'bottom-left');
+
+      // Error handling
+      map.current.on('error', (e) => {
+        console.error('Map error:', e);
+        setError('حدث خطأ في تحميل الخريطة. يرجى تحديث الصفحة.');
+        setLoading(false);
+      });
+
+      map.current.on('load', () => {
+        setLoading(false);
 
       // Add 3D buildings with enhanced details
       const layers = map.current.getStyle().layers;
@@ -396,6 +412,12 @@ export default function EnhancedProfessionalMap() {
       });
     });
 
+    } catch (err) {
+      console.error('Error initializing map:', err);
+      setError('فشل تحميل الخريطة. يرجى التحقق من اتصال الإنترنت والمحاولة مرة أخرى.');
+      setLoading(false);
+    }
+
     return () => {
       if (map.current) {
         map.current.remove();
@@ -454,7 +476,7 @@ export default function EnhancedProfessionalMap() {
       <div className="flex-1 relative">
         <div ref={mapContainer} className="w-full h-full" />
         
-        {loading && (
+        {loading && !error && (
           <div className="absolute inset-0 flex items-center justify-center bg-gray-900/90 backdrop-blur-sm z-50">
             <div className="text-center">
               <div className="mb-6">
@@ -462,6 +484,26 @@ export default function EnhancedProfessionalMap() {
               </div>
               <div className="text-white text-2xl font-bold mb-3">جاري تحميل الخريطة...</div>
               <div className="text-blue-400 text-lg">تحميل 500 موقع عقاري مع رسوميات 3D عالية الدقة</div>
+            </div>
+          </div>
+        )}
+
+        {error && (
+          <div className="absolute inset-0 flex items-center justify-center bg-gray-900/90 backdrop-blur-sm z-50">
+            <div className="text-center max-w-md mx-auto p-8">
+              <div className="mb-6">
+                <div className="w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mx-auto">
+                  <X className="w-10 h-10 text-red-500" />
+                </div>
+              </div>
+              <div className="text-white text-2xl font-bold mb-3">فشل تحميل الخريطة</div>
+              <div className="text-gray-300 text-lg mb-6">{error}</div>
+              <button
+                onClick={() => window.location.reload()}
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+              >
+                إعادة المحاولة
+              </button>
             </div>
           </div>
         )}
