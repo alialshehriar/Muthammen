@@ -6,6 +6,7 @@ import ResultDisplay from './components/ResultDisplay';
 import Subscriptions from './pages/Subscriptions';
 import Referrals from './pages/Referrals';
 import Register from './pages/Register';
+import AdminDashboard from './pages/AdminDashboard';
 import MarketStudy from './market/MarketStudy';
 import EnhancedProfessionalMap from "./map/EnhancedProfessionalMap";
 import { calculatePropertyValue } from './lib/aiEngine';
@@ -127,6 +128,10 @@ function App() {
 
   if (currentPage === 'register') {
     return <Register />;
+  }
+
+  if (currentPage === 'admin') {
+    return <AdminDashboard />;
   }
 
   // الصفحة الرئيسية (التقييم)
