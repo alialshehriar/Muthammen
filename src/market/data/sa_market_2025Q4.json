@@ -1,0 +1,28 @@
+{
+  "period": "2025Q4",
+  "updated_at": "2025-10-13",
+  "note": "بيانات تجريبية محلية - سيتم تحديثها من مصادر رسمية لاحقاً",
+  "national": {
+    "sale_price_per_m2": 4350,
+    "rent_price_per_m2_month": 75,
+    "sale_yoy": 0.06,
+    "rent_yoy": 0.04,
+    "avg_days_to_sell": 52,
+    "national_confidence": 0.82,
+    "total_transactions": 245000,
+    "transaction_volume_billion": 187.5
+  },
+  "trends": {
+    "sale_trend": "صاعد",
+    "rent_trend": "مستقر",
+    "demand_level": "مرتفع",
+    "supply_level": "متوازن"
+  },
+  "insights": [
+    "نمو مستمر في أسعار البيع بنسبة 6% سنوياً",
+    "استقرار نسبي في أسعار الإيجارات",
+    "زيادة الطلب على الوحدات السكنية في المدن الرئيسية",
+    "تحسن ملحوظ في سرعة البيع مقارنة بالربع السابق"
+  ]
+}
+

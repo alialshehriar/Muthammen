@@ -1,0 +1,97 @@
+{
+  "note": "بيانات تجريبية محلية - كثافة الخدمات حسب الحي",
+  "version": "2025Q4",
+  "districts": {
+    "riyadh_olaya": {
+      "city": "الرياض",
+      "district": "العليا",
+      "coords": [46.6753, 24.7136],
+      "services": {
+        "schools": 12,
+        "parks": 8,
+        "mosques": 15,
+        "supermarkets": 22,
+        "hospitals": 4,
+        "restaurants": 45,
+        "cafes": 38
+      },
+      "density_score": 92
+    },
+    "riyadh_malqa": {
+      "city": "الرياض",
+      "district": "الملقا",
+      "coords": [46.6234, 24.7743],
+      "services": {
+        "schools": 18,
+        "parks": 12,
+        "mosques": 20,
+        "supermarkets": 28,
+        "hospitals": 3,
+        "restaurants": 35,
+        "cafes": 25
+      },
+      "density_score": 88
+    },
+    "riyadh_narjis": {
+      "city": "الرياض",
+      "district": "النرجس",
+      "coords": [46.7234, 24.8143],
+      "services": {
+        "schools": 15,
+        "parks": 10,
+        "mosques": 18,
+        "supermarkets": 20,
+        "hospitals": 2,
+        "restaurants": 28,
+        "cafes": 22
+      },
+      "density_score": 85
+    },
+    "jeddah_rawdah": {
+      "city": "جدة",
+      "district": "الروضة",
+      "coords": [39.1653, 21.5811],
+      "services": {
+        "schools": 14,
+        "parks": 9,
+        "mosques": 17,
+        "supermarkets": 25,
+        "hospitals": 3,
+        "restaurants": 40,
+        "cafes": 32
+      },
+      "density_score": 90
+    },
+    "jeddah_salamah": {
+      "city": "جدة",
+      "district": "السلامة",
+      "coords": [39.1953, 21.6211],
+      "services": {
+        "schools": 16,
+        "parks": 11,
+        "mosques": 19,
+        "supermarkets": 23,
+        "hospitals": 4,
+        "restaurants": 38,
+        "cafes": 30
+      },
+      "density_score": 87
+    },
+    "dammam_faisaliyah": {
+      "city": "الدمام",
+      "district": "الفيصلية",
+      "coords": [50.1088, 26.4207],
+      "services": {
+        "schools": 10,
+        "parks": 7,
+        "mosques": 14,
+        "supermarkets": 18,
+        "hospitals": 2,
+        "restaurants": 25,
+        "cafes": 20
+      },
+      "density_score": 82
+    }
+  }
+}
+

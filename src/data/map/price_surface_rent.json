@@ -1,0 +1,99 @@
+{
+  "type": "FeatureCollection",
+  "note": "بيانات أسعار الإيجار التجريبية - ريال/م²/شهر",
+  "version": "2025Q4",
+  "updated_at": "2025-10-13",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "district": "العليا",
+        "city": "الرياض",
+        "rent_per_sqm_month": 75,
+        "samples": 19,
+        "confidence": 78,
+        "trend": "stable"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [46.6753, 24.7136]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "district": "الملقا",
+        "city": "الرياض",
+        "rent_per_sqm_month": 68,
+        "samples": 24,
+        "confidence": 81,
+        "trend": "rising"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [46.6234, 24.7743]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "district": "النرجس",
+        "city": "الرياض",
+        "rent_per_sqm_month": 63,
+        "samples": 21,
+        "confidence": 76,
+        "trend": "stable"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [46.7234, 24.8143]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "district": "الروضة",
+        "city": "جدة",
+        "rent_per_sqm_month": 66,
+        "samples": 23,
+        "confidence": 79,
+        "trend": "stable"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [39.1653, 21.5811]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "district": "السلامة",
+        "city": "جدة",
+        "rent_per_sqm_month": 70,
+        "samples": 20,
+        "confidence": 80,
+        "trend": "rising"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [39.1953, 21.6211]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "district": "الفيصلية",
+        "city": "الدمام",
+        "rent_per_sqm_month": 54,
+        "samples": 16,
+        "confidence": 74,
+        "trend": "stable"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [50.1088, 26.4207]
+      }
+    }
+  ]
+}
+

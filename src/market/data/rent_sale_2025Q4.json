@@ -1,0 +1,75 @@
+[
+  {
+    "month": "2024-11",
+    "month_ar": "نوفمبر ٢٠٢٤",
+    "sale_price_per_m2": 4100,
+    "rent_price_per_m2_month": 72
+  },
+  {
+    "month": "2024-12",
+    "month_ar": "ديسمبر ٢٠٢٤",
+    "sale_price_per_m2": 4150,
+    "rent_price_per_m2_month": 73
+  },
+  {
+    "month": "2025-01",
+    "month_ar": "يناير ٢٠٢٥",
+    "sale_price_per_m2": 4180,
+    "rent_price_per_m2_month": 73
+  },
+  {
+    "month": "2025-02",
+    "month_ar": "فبراير ٢٠٢٥",
+    "sale_price_per_m2": 4200,
+    "rent_price_per_m2_month": 74
+  },
+  {
+    "month": "2025-03",
+    "month_ar": "مارس ٢٠٢٥",
+    "sale_price_per_m2": 4220,
+    "rent_price_per_m2_month": 74
+  },
+  {
+    "month": "2025-04",
+    "month_ar": "أبريل ٢٠٢٥",
+    "sale_price_per_m2": 4250,
+    "rent_price_per_m2_month": 74
+  },
+  {
+    "month": "2025-05",
+    "month_ar": "مايو ٢٠٢٥",
+    "sale_price_per_m2": 4270,
+    "rent_price_per_m2_month": 75
+  },
+  {
+    "month": "2025-06",
+    "month_ar": "يونيو ٢٠٢٥",
+    "sale_price_per_m2": 4290,
+    "rent_price_per_m2_month": 75
+  },
+  {
+    "month": "2025-07",
+    "month_ar": "يوليو ٢٠٢٥",
+    "sale_price_per_m2": 4310,
+    "rent_price_per_m2_month": 75
+  },
+  {
+    "month": "2025-08",
+    "month_ar": "أغسطس ٢٠٢٥",
+    "sale_price_per_m2": 4330,
+    "rent_price_per_m2_month": 76
+  },
+  {
+    "month": "2025-09",
+    "month_ar": "سبتمبر ٢٠٢٥",
+    "sale_price_per_m2": 4340,
+    "rent_price_per_m2_month": 76
+  },
+  {
+    "month": "2025-10",
+    "month_ar": "أكتوبر ٢٠٢٥",
+    "sale_price_per_m2": 4350,
+    "rent_price_per_m2_month": 75
+  }
+]
+

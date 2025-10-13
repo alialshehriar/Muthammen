@@ -1,0 +1,342 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [46.6753, 24.7136]
+      },
+      "properties": {
+        "id": "riyadh-olaya-001",
+        "city": "الرياض",
+        "district": "العليا",
+        "region": "الرياض",
+        "avgPrice": 8500,
+        "trend": "صاعد",
+        "growth": 12.5,
+        "samples": 245,
+        "confidence": 95,
+        "propertyTypes": ["شقق فاخرة", "أبراج سكنية", "مكاتب"],
+        "amenities": ["مولات", "مطاعم", "مستشفيات", "مدارس"],
+        "description": "منطقة تجارية راقية في قلب الرياض"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [46.6877, 24.7242]
+      },
+      "properties": {
+        "id": "riyadh-malqa-001",
+        "city": "الرياض",
+        "district": "الملقا",
+        "region": "الرياض",
+        "avgPrice": 3800,
+        "trend": "صاعد",
+        "growth": 8.3,
+        "samples": 189,
+        "confidence": 88,
+        "propertyTypes": ["فلل", "شقق", "دوبلكس"],
+        "amenities": ["مدارس", "حدائق", "مراكز تسوق"],
+        "description": "حي سكني هادئ شمال الرياض"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [46.6244, 24.6877]
+      },
+      "properties": {
+        "id": "riyadh-narjis-001",
+        "city": "الرياض",
+        "district": "النرجس",
+        "region": "الرياض",
+        "avgPrice": 4200,
+        "trend": "مستقر",
+        "growth": 3.1,
+        "samples": 156,
+        "confidence": 82,
+        "propertyTypes": ["فلل", "شقق"],
+        "amenities": ["مدارس", "مساجد", "حدائق"],
+        "description": "حي سكني راقي شمال غرب الرياض"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [39.8260, 21.4225]
+      },
+      "properties": {
+        "id": "makkah-aziziyah-001",
+        "city": "مكة المكرمة",
+        "district": "العزيزية",
+        "region": "مكة المكرمة",
+        "avgPrice": 12500,
+        "trend": "صاعد",
+        "growth": 15.8,
+        "samples": 312,
+        "confidence": 92,
+        "propertyTypes": ["شقق", "أبراج", "فنادق"],
+        "amenities": ["قرب الحرم", "مطاعم", "أسواق"],
+        "description": "منطقة حيوية قريبة من الحرم المكي"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [39.1925, 21.4858]
+      },
+      "properties": {
+        "id": "jeddah-rawdah-001",
+        "city": "جدة",
+        "district": "الروضة",
+        "region": "مكة المكرمة",
+        "avgPrice": 5200,
+        "trend": "صاعد",
+        "growth": 9.7,
+        "samples": 198,
+        "confidence": 87,
+        "propertyTypes": ["فلل", "شقق", "دوبلكس"],
+        "amenities": ["كورنيش", "مدارس", "مولات"],
+        "description": "حي سكني راقي شمال جدة"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [50.2089, 26.4207]
+      },
+      "properties": {
+        "id": "dammam-faisaliyah-001",
+        "city": "الدمام",
+        "district": "الفيصلية",
+        "region": "المنطقة الشرقية",
+        "avgPrice": 3600,
+        "trend": "مستقر",
+        "growth": 2.4,
+        "samples": 134,
+        "confidence": 79,
+        "propertyTypes": ["شقق", "فلل"],
+        "amenities": ["كورنيش", "مدارس", "مستشفيات"],
+        "description": "منطقة ساحلية هادئة في الدمام"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [39.6142, 24.4672]
+      },
+      "properties": {
+        "id": "madinah-quba-001",
+        "city": "المدينة المنورة",
+        "district": "قباء",
+        "region": "المدينة المنورة",
+        "avgPrice": 4800,
+        "trend": "صاعد",
+        "growth": 11.2,
+        "samples": 167,
+        "confidence": 85,
+        "propertyTypes": ["شقق", "فلل"],
+        "amenities": ["مساجد", "أسواق", "مدارس"],
+        "description": "منطقة تاريخية قرب مسجد قباء"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [43.9750, 26.4367]
+      },
+      "properties": {
+        "id": "buraidah-center-001",
+        "city": "بريدة",
+        "district": "الوسط",
+        "region": "القصيم",
+        "avgPrice": 2100,
+        "trend": "مستقر",
+        "growth": 1.8,
+        "samples": 89,
+        "confidence": 72,
+        "propertyTypes": ["شقق", "فلل", "محلات"],
+        "amenities": ["أسواق", "مساجد", "مدارس"],
+        "description": "وسط المدينة التجاري"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [42.5053, 18.2164]
+      },
+      "properties": {
+        "id": "abha-center-001",
+        "city": "أبها",
+        "district": "المركز",
+        "region": "عسير",
+        "avgPrice": 2800,
+        "trend": "صاعد",
+        "growth": 6.9,
+        "samples": 76,
+        "confidence": 68,
+        "propertyTypes": ["شقق", "فلل", "استراحات"],
+        "amenities": ["جبال", "منتزهات", "مطاعم"],
+        "description": "منطقة سياحية جبلية"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [36.5750, 28.3838]
+      },
+      "properties": {
+        "id": "tabuk-center-001",
+        "city": "تبوك",
+        "district": "المركز",
+        "region": "تبوك",
+        "avgPrice": 1900,
+        "trend": "صاعد",
+        "growth": 7.5,
+        "samples": 52,
+        "confidence": 65,
+        "propertyTypes": ["شقق", "فلل"],
+        "amenities": ["أسواق", "مدارس", "مستشفيات"],
+        "description": "مدينة شمالية نامية"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [41.6880, 27.5236]
+      },
+      "properties": {
+        "id": "hail-center-001",
+        "city": "حائل",
+        "district": "المركز",
+        "region": "حائل",
+        "avgPrice": 1700,
+        "trend": "مستقر",
+        "growth": 0.9,
+        "samples": 48,
+        "confidence": 62,
+        "propertyTypes": ["شقق", "فلل"],
+        "amenities": ["أسواق", "مساجد"],
+        "description": "مدينة تاريخية"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [40.0760, 29.9857]
+      },
+      "properties": {
+        "id": "jouf-center-001",
+        "city": "سكاكا",
+        "district": "المركز",
+        "region": "الجوف",
+        "avgPrice": 1600,
+        "trend": "صاعد",
+        "growth": 5.2,
+        "samples": 41,
+        "confidence": 58,
+        "propertyTypes": ["شقق", "فلل"],
+        "amenities": ["أسواق", "مدارس"],
+        "description": "عاصمة منطقة الجوف"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [42.5511, 16.8892]
+      },
+      "properties": {
+        "id": "jazan-center-001",
+        "city": "جازان",
+        "district": "المركز",
+        "region": "جازان",
+        "avgPrice": 2200,
+        "trend": "صاعد",
+        "growth": 8.1,
+        "samples": 67,
+        "confidence": 71,
+        "propertyTypes": ["شقق", "فلل"],
+        "amenities": ["شواطئ", "أسواق", "مدارس"],
+        "description": "مدينة ساحلية جنوبية"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [44.2166, 17.4917]
+      },
+      "properties": {
+        "id": "najran-center-001",
+        "city": "نجران",
+        "district": "المركز",
+        "region": "نجران",
+        "avgPrice": 1800,
+        "trend": "مستقر",
+        "growth": 2.3,
+        "samples": 39,
+        "confidence": 56,
+        "propertyTypes": ["شقق", "فلل"],
+        "amenities": ["أسواق", "مساجد"],
+        "description": "مدينة حدودية جنوبية"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [41.4667, 20.0129]
+      },
+      "properties": {
+        "id": "baha-center-001",
+        "city": "الباحة",
+        "district": "المركز",
+        "region": "الباحة",
+        "avgPrice": 2400,
+        "trend": "صاعد",
+        "growth": 4.7,
+        "samples": 44,
+        "confidence": 61,
+        "propertyTypes": ["فلل", "استراحات"],
+        "amenities": ["جبال", "منتزهات", "غابات"],
+        "description": "منطقة جبلية سياحية"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [41.0542, 30.9843]
+      },
+      "properties": {
+        "id": "northern-border-001",
+        "city": "عرعر",
+        "district": "المركز",
+        "region": "الحدود الشمالية",
+        "avgPrice": 1500,
+        "trend": "مستقر",
+        "growth": 1.2,
+        "samples": 28,
+        "confidence": 52,
+        "propertyTypes": ["شقق", "فلل"],
+        "amenities": ["أسواق", "مدارس"],
+        "description": "عاصمة الحدود الشمالية"
+      }
+    }
+  ]
+}
+
