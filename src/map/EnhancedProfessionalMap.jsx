@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { Search, Navigation, Layers, ZoomIn, ZoomOut, Home, X, Info } from 'lucide-react';
-import riyadhNeighborhoods from '../data/riyadh_neighborhoods.geojson';
+import riyadhNeighborhoods from '../data/riyadh_neighborhoods.js';
 import saudiLocations from '../data/accurate_saudi_locations';
 
 mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN || 'pk.eyJ1IjoiYWxpYWxzaGVocmlhciIsImEiOiJjbWdvemtkbzEwOHltMmlxdHh3M3l1cHBhIn0.c-t3RizZIPUwOr3ZTb2Ijw';
