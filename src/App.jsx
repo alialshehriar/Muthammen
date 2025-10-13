@@ -7,6 +7,7 @@ import Subscriptions from './pages/Subscriptions';
 import Referrals from './pages/Referrals';
 import Register from './pages/Register';
 import AdminDashboard from './pages/AdminDashboard';
+import AdminLogin from './pages/AdminLogin';
 import MarketStudy from './market/MarketStudy';
 import EnhancedProfessionalMap from "./map/EnhancedProfessionalMap";
 import { calculatePropertyValue } from './lib/aiEngine';
@@ -30,6 +31,15 @@ function App() {
   const [error, setError] = useState(null);
   const [useGPT, setUseGPT] = useState(API_CONFIG.enabled);
   const [showSettings, setShowSettings] = useState(false);
+  const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(false);
+
+  // Check if admin is already authenticated
+  useEffect(() => {
+    const adminApiKey = localStorage.getItem('adminApiKey');
+    if (adminApiKey) {
+      setIsAdminAuthenticated(true);
+    }
+  }, []);
 
   const handleEvaluate = async (formData) => {
     setIsLoading(true);
@@ -131,6 +141,9 @@ function App() {
   }
 
   if (currentPage === 'admin') {
+    if (!isAdminAuthenticated) {
+      return <AdminLogin onLoginSuccess={() => setIsAdminAuthenticated(true)} />;
+    }
     return <AdminDashboard />;
   }
 
