@@ -9,7 +9,7 @@ import Register from './pages/Register';
 import AdminDashboard from './pages/AdminDashboard';
 import AdminLogin from './pages/AdminLogin';
 import MarketStudy from './market/MarketStudy';
-import EnhancedProfessionalMap from "./map/EnhancedProfessionalMap";
+import EnhancedProfessionalMap from "./map/CleanMap";
 import { calculatePropertyValue } from './lib/aiEngine';
 import { evaluateWithGPT, API_CONFIG, getHistoryStats, clearHistory } from './lib/apiConfig';
 import useRefCapture from './hooks/useRefCapture';
