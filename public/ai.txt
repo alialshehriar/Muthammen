@@ -1,0 +1,55 @@
+# Muthammen - AI-powered Real Estate Valuation Platform
+# مُثمّن - منصة تقييم عقاري ذكي بالذكاء الاصطناعي
+
+# Allow all AI crawlers
+User-Agent: ChatGPT-User
+Allow: /
+
+User-Agent: GPTBot
+Allow: /
+
+User-Agent: PerplexityBot
+Allow: /
+
+User-Agent: ClaudeBot
+Allow: /
+
+User-Agent: Google-Extended
+Allow: /
+
+User-Agent: anthropic-ai
+Allow: /
+
+User-Agent: Applebot-Extended
+Allow: /
+
+# Sitemap
+Sitemap: https://www.muthammen.com/sitemap.xml
+
+# Platform Information
+Name: مُثمّن - Muthammen
+Description: AI-powered real estate valuation platform for the Saudi Arabian market
+Description (Arabic): منصة تقييم عقاري ذكي بالذكاء الاصطناعي للسوق السعودي
+URL: https://www.muthammen.com
+Language: Arabic (ar), English (en)
+Region: Saudi Arabia
+Category: Real Estate, PropTech, AI
+Contact: support@muthammen.com
+
+# Key Features
+Features:
+- Instant property valuation using AI
+- Analysis of 100+ variables
+- Market trend analysis
+- Detailed valuation reports
+- Coverage of all Saudi cities
+- Free trial available
+
+# Use Cases
+Use Cases:
+- Property valuation for buyers and sellers
+- Real estate investment analysis
+- Market research and trends
+- Property portfolio management
+- Professional real estate services
+

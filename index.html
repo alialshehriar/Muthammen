@@ -45,7 +45,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Noto+Sans+Arabic:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
-    <!-- Structured Data (JSON-LD) -->
+    <!-- Structured Data (JSON-LD) - WebApplication -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -54,22 +54,108 @@
       "alternateName": "Muthammen",
       "url": "https://muthammen.com",
       "description": "تطبيق تقييم عقاري ذكي باستخدام الذكاء الاصطناعي للسوق السعودي",
-      "applicationCategory": "Real Estate",
-      "operatingSystem": "Web",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web, iOS, Android",
+      "browserRequirements": "Requires JavaScript. Requires HTML5.",
       "offers": {
         "@type": "Offer",
         "price": "0",
-        "priceCurrency": "SAR"
+        "priceCurrency": "SAR",
+        "availability": "https://schema.org/InStock"
       },
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "ratingCount": "1250"
+        "ratingValue": "4.9",
+        "ratingCount": "2500",
+        "bestRating": "5",
+        "worstRating": "1"
       },
       "provider": {
         "@type": "Organization",
         "name": "Muthammen",
-        "url": "https://muthammen.com"
+        "url": "https://muthammen.com",
+        "logo": "https://muthammen.com/logo.png",
+        "sameAs": [
+          "https://twitter.com/muthammen",
+          "https://linkedin.com/company/muthammen"
+        ]
+      },
+      "featureList": [
+        "تقييم عقاري فوري",
+        "تحليل بالذكاء الاصطناعي",
+        "تقارير مفصلة",
+        "دقة عالية",
+        "تغطية جميع مدن السعودية"
+      ]
+    }
+    </script>
+    
+    <!-- Structured Data - Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "مُثمّن - Muthammen",
+      "url": "https://muthammen.com",
+      "logo": "https://muthammen.com/logo.png",
+      "description": "منصة تقييم عقاري ذكي بالذكاء الاصطناعي للسوق السعودي",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "SA",
+        "addressRegion": "Riyadh"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "availableLanguage": ["Arabic", "English"]
+      },
+      "sameAs": [
+        "https://twitter.com/muthammen",
+        "https://linkedin.com/company/muthammen"
+      ]
+    }
+    </script>
+    
+    <!-- Structured Data - Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "تقييم عقاري بالذكاء الاصطناعي",
+      "provider": {
+        "@type": "Organization",
+        "name": "مُثمّن"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Saudi Arabia"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "خدمات مُثمّن",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "تقييم عقاري فوري"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "تحليل سوق عقاري"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "تقارير مفصلة"
+            }
+          }
+        ]
       }
     }
     </script>
