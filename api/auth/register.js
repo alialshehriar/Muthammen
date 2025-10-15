@@ -1,5 +1,7 @@
-import { query } from '../../lib/db.js';
+import { neon } from '@neondatabase/serverless';
 import bcrypt from 'bcryptjs';
+
+const sql = neon(process.env.DATABASE_URL);
 
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Credentials', 'true');
@@ -37,42 +39,45 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'كلمة المرور يجب أن تكون 8 أحرف على الأقل' });
     }
 
-    const existingUser = await query(
-      'SELECT id FROM users WHERE email = $1 OR phone = $2',
-      [email, phone]
-    );
+    // Check if user exists using tagged template
+    const existingUsers = await sql`
+      SELECT id FROM users 
+      WHERE email = ${email} OR phone = ${phone}
+    `;
 
-    if (existingUser.rows.length > 0) {
+    if (existingUsers.length > 0) {
       return res.status(400).json({ error: 'البريد الإلكتروني أو رقم الجوال مسجل مسبقاً' });
     }
 
     const saltRounds = 10;
     const passwordHash = await bcrypt.hash(password, saltRounds);
 
+    // Generate verification code
     const verificationCode = Math.floor(100000 + Math.random() * 900000).toString();
-    const verificationExpiry = new Date(Date.now() + 15 * 60 * 1000);
+    const verificationExpiry = new Date(Date.now() + 15 * 60 * 1000); // 15 minutes
 
-    const result = await query(
-      `INSERT INTO users (name, email, phone, password_hash, email_verified, verification_code, verification_code_expiry, created_at, updated_at)
-       VALUES ($1, $2, $3, $4, $5, $6, $7, NOW(), NOW())
-       RETURNING id, name, email, phone, created_at`,
-      [name, email, phone, passwordHash, false, verificationCode, verificationExpiry]
-    );
+    // Insert new user using tagged template
+    const newUsers = await sql`
+      INSERT INTO users (name, email, phone, password_hash, verification_code, verification_code_expiry, email_verified, created_at)
+      VALUES (${name}, ${email}, ${phone}, ${passwordHash}, ${verificationCode}, ${verificationExpiry.toISOString()}, false, NOW())
+      RETURNING id, name, email, phone, created_at
+    `;
 
-    const newUser = result.rows[0];
+    const newUser = newUsers[0];
 
+    // TODO: Send verification email with code
     console.log(`Verification code for ${email}: ${verificationCode}`);
 
     return res.status(201).json({
       success: true,
-      message: 'تم إنشاء الحساب بنجاح! تم إرسال رمز التحقق إلى بريدك الإلكتروني',
+      message: 'تم إنشاء الحساب بنجاح! يرجى التحقق من بريدك الإلكتروني',
       user: {
         id: newUser.id,
         name: newUser.name,
         email: newUser.email,
         phone: newUser.phone,
       },
-      verificationCode: verificationCode,
+      requiresVerification: true,
     });
 
   } catch (error) {
@@ -83,3 +88,4 @@ export default async function handler(req, res) {
     });
   }
 }
+
