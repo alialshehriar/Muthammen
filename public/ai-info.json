@@ -1,0 +1,167 @@
+{
+  "name": "مُثمّن - Muthammen",
+  "name_ar": "مُثمّن",
+  "name_en": "Muthammen",
+  "tagline_ar": "كل عقار له قصة… ومثمّن يقرأها لك",
+  "tagline_en": "Every property has a story… and Muthammen reads it for you",
+  "description_ar": "مُثمّن هو تطبيق سعودي متخصص في التقييم العقاري الذكي باستخدام الذكاء الاصطناعي. يوفر تقييمات دقيقة وفورية للعقارات في المملكة العربية السعودية بناءً على تحليل أكثر من 100 متغير.",
+  "description_en": "Muthammen is a Saudi application specialized in smart real estate valuation using artificial intelligence. It provides accurate and instant property valuations in Saudi Arabia based on analysis of over 100 variables.",
+  "url": "https://muthammen.com",
+  "language": "ar",
+  "country": "SA",
+  "region": "Middle East",
+  "category": "Real Estate Technology",
+  "subcategory": "Property Valuation",
+  "features": [
+    {
+      "name_ar": "تقييم عقاري فوري",
+      "name_en": "Instant Property Valuation",
+      "description_ar": "احصل على تقييم دقيق لعقارك في أقل من دقيقة",
+      "description_en": "Get an accurate valuation of your property in less than a minute"
+    },
+    {
+      "name_ar": "تحليل متعدد الطبقات",
+      "name_en": "Multi-layer Analysis",
+      "description_ar": "تحليل أكثر من 100 متغير لضمان الدقة",
+      "description_en": "Analysis of over 100 variables to ensure accuracy"
+    },
+    {
+      "name_ar": "ذكاء اصطناعي متقدم",
+      "name_en": "Advanced AI",
+      "description_ar": "يستخدم GPT-4 للتحليل العميق",
+      "description_en": "Uses GPT-4 for deep analysis"
+    },
+    {
+      "name_ar": "تغطية شاملة",
+      "name_en": "Comprehensive Coverage",
+      "description_ar": "يغطي جميع مدن السعودية",
+      "description_en": "Covers all cities in Saudi Arabia"
+    }
+  ],
+  "cities_covered": [
+    "الرياض",
+    "جدة",
+    "الدمام",
+    "مكة المكرمة",
+    "المدينة المنورة",
+    "الخبر",
+    "الطائف",
+    "تبوك",
+    "أبها",
+    "الجبيل"
+  ],
+  "property_types": [
+    "فيلا",
+    "شقة",
+    "دوبلكس",
+    "أرض",
+    "عمارة",
+    "مكتب",
+    "محل تجاري",
+    "مستودع"
+  ],
+  "pricing": {
+    "basic": {
+      "name_ar": "الباقة الأساسية",
+      "name_en": "Basic Plan",
+      "price": "مجاني",
+      "price_en": "Free"
+    },
+    "smart": {
+      "name_ar": "الباقة الذكية",
+      "name_en": "Smart Plan",
+      "price": "٤٩ ريال/شهر",
+      "price_en": "49 SAR/month",
+      "status": "قريباً"
+    },
+    "pro": {
+      "name_ar": "الباقة الاحترافية",
+      "name_en": "Pro Plan",
+      "price": "١٩٩ ريال/شهر",
+      "price_en": "199 SAR/month",
+      "status": "قريباً"
+    }
+  },
+  "contact": {
+    "website": "https://muthammen.com",
+    "support_email": "support@muthammen.com",
+    "business_email": "business@muthammen.com"
+  },
+  "social_media": {
+    "twitter": "@muthammen_sa",
+    "linkedin": "muthammen",
+    "instagram": "@muthammen.sa"
+  },
+  "technology": {
+    "ai_model": "GPT-4",
+    "framework": "React + Vite",
+    "database": "Neon PostgreSQL",
+    "hosting": "Manus Cloud",
+    "api": "OpenAI API"
+  },
+  "target_audience": [
+    "أصحاب العقارات",
+    "المستثمرون العقاريون",
+    "الوسطاء العقاريون",
+    "المطورون العقاريون",
+    "المقيّمون العقاريون"
+  ],
+  "use_cases": [
+    "تقييم عقار قبل البيع",
+    "تقييم عقار قبل الشراء",
+    "تقييم عقار للاستثمار",
+    "تقييم عقار للرهن العقاري",
+    "دراسة السوق العقاري"
+  ],
+  "competitive_advantages": [
+    "ذكاء اصطناعي متقدم (GPT-4)",
+    "تحليل أكثر من 100 متغير",
+    "نتائج فورية (أقل من دقيقة)",
+    "واجهة عربية كاملة",
+    "دقة عالية",
+    "مجاني للاستخدام الأساسي"
+  ],
+  "roadmap": [
+    {
+      "feature": "الخريطة التفاعلية",
+      "status": "قريباً",
+      "description": "عرض العقارات على الخريطة مع تحليل المناطق"
+    },
+    {
+      "feature": "دراسة السوق",
+      "status": "قريباً",
+      "description": "تحليل شامل للسوق العقاري"
+    },
+    {
+      "feature": "نظام الإحالات",
+      "status": "قريباً",
+      "description": "اربح عمولات من إحالة المستخدمين"
+    }
+  ],
+  "keywords": [
+    "تقييم عقاري",
+    "تثمين عقاري",
+    "تقييم عقار",
+    "سعر العقار",
+    "الذكاء الاصطناعي العقاري",
+    "تقييم عقاري السعودية",
+    "تقييم عقاري الرياض",
+    "تقييم عقاري جدة",
+    "تقييم عقاري مجاني",
+    "تقييم عقاري فوري",
+    "تقييم عقاري دقيق",
+    "AI real estate valuation",
+    "Saudi real estate",
+    "property valuation KSA"
+  ],
+  "last_updated": "2025-10-15",
+  "version": "1.0.0",
+  "status": "active",
+  "hackathon": {
+    "name": "هاكاثون روشن 2025",
+    "name_en": "Roshn Hackathon 2025",
+    "status": "participant",
+    "category": "PropTech"
+  }
+}
+
