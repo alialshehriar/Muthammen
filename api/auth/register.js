@@ -7,6 +7,15 @@
 import { neon } from '@neondatabase/serverless';
 import bcrypt from 'bcryptjs';
 
+// Initialize database connection
+const getDatabaseConnection = () => {
+  const connectionString = process.env.DATABASE_URL;
+  if (!connectionString) {
+    throw new Error('DATABASE_URL environment variable is not set');
+  }
+  return neon(connectionString);
+};
+
 export default async function handler(req, res) {
   // Only allow POST requests
   if (req.method !== 'POST') {
@@ -47,7 +56,7 @@ export default async function handler(req, res) {
     }
 
     // Connect to database
-    const sql = neon(process.env.DATABASE_URL);
+    const sql = getDatabaseConnection();
 
     // Check if email already exists
     const existingEmail = await sql`
