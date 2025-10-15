@@ -1,7 +1,5 @@
-import { neon } from '@neondatabase/serverless';
+import prisma from '../../lib/prisma.js';
 import bcrypt from 'bcryptjs';
-
-const sql = neon(process.env.DATABASE_URL);
 
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Credentials', 'true');
@@ -21,6 +19,7 @@ export default async function handler(req, res) {
   try {
     const { name, email, phone, password } = req.body;
 
+    // Validation
     if (!name || !email || !phone || !password) {
       return res.status(400).json({ error: 'جميع الحقول مطلوبة' });
     }
@@ -39,16 +38,21 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'كلمة المرور يجب أن تكون 8 أحرف على الأقل' });
     }
 
-    // Check if user exists using tagged template
-    const existingUsers = await sql`
-      SELECT id FROM users 
-      WHERE email = ${email} OR phone = ${phone}
-    `;
+    // Check if user exists
+    const existingUser = await prisma.user.findFirst({
+      where: {
+        OR: [
+          { email: email },
+          { phone: phone }
+        ]
+      }
+    });
 
-    if (existingUsers.length > 0) {
+    if (existingUser) {
       return res.status(400).json({ error: 'البريد الإلكتروني أو رقم الجوال مسجل مسبقاً' });
     }
 
+    // Hash password
     const saltRounds = 10;
     const passwordHash = await bcrypt.hash(password, saltRounds);
 
@@ -56,14 +60,18 @@ export default async function handler(req, res) {
     const verificationCode = Math.floor(100000 + Math.random() * 900000).toString();
     const verificationExpiry = new Date(Date.now() + 15 * 60 * 1000); // 15 minutes
 
-    // Insert new user using tagged template
-    const newUsers = await sql`
-      INSERT INTO users (name, email, phone, password_hash, verification_code, verification_code_expiry, email_verified, created_at)
-      VALUES (${name}, ${email}, ${phone}, ${passwordHash}, ${verificationCode}, ${verificationExpiry.toISOString()}, false, NOW())
-      RETURNING id, name, email, phone, created_at
-    `;
-
-    const newUser = newUsers[0];
+    // Create new user
+    const newUser = await prisma.user.create({
+      data: {
+        name,
+        email,
+        phone,
+        passwordHash,
+        verificationCode,
+        verificationCodeExpiry: verificationExpiry,
+        emailVerified: false
+      }
+    });
 
     // TODO: Send verification email with code
     console.log(`Verification code for ${email}: ${verificationCode}`);
