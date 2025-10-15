@@ -20,7 +20,7 @@ import {
   Building2, Sparkles, Settings as SettingsIcon, RotateCcw, 
   Brain, Zap, TrendingUp, CheckCircle2,
   Github, Mail, AlertCircle, Home, CreditCard,
-  Users, BarChart3, MessageSquare, Map, LogOut
+  Users, BarChart3, MessageSquare, Map, LogOut, Shield
 } from 'lucide-react';
 import './App.css';
 
@@ -428,6 +428,12 @@ function Header({ currentPage, navigateTo, showSettings, setShowSettings, curren
               label="الإحالات" 
               active={currentPage === 'referrals'}
               onClick={() => navigateTo('referrals')}
+            />
+            <NavButton 
+              icon={Shield} 
+              label="لوحة الإدارة" 
+              active={currentPage === 'admin'}
+              onClick={() => navigateTo('admin')}
             />
             
             {/* معلومات المستخدم */}

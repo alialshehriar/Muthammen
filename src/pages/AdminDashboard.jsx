@@ -5,6 +5,7 @@
  */
 
 import React, { useState, useEffect } from 'react';
+import DatabaseManager from './DatabaseManager';
 import { 
   Users, TrendingUp, DollarSign, FileText, Activity,
   UserPlus, Award, BarChart3, Calendar, Clock,
@@ -116,7 +117,8 @@ export default function AdminDashboard() {
               { id: 'referrals', label: 'الإحالات', icon: Award },
               { id: 'subscriptions', label: 'الاشتراكات', icon: DollarSign },
               { id: 'evaluations', label: 'التقييمات', icon: FileText },
-              { id: 'activity', label: 'النشاطات', icon: Activity }
+              { id: 'activity', label: 'النشاطات', icon: Activity },
+              { id: 'database', label: 'قاعدة البيانات', icon: BarChart3 }
             ].map(tab => (
               <button
                 key={tab.id}
@@ -143,6 +145,7 @@ export default function AdminDashboard() {
         {selectedTab === 'subscriptions' && <SubscriptionsTab stats={stats} />}
         {selectedTab === 'evaluations' && <EvaluationsTab stats={stats} />}
         {selectedTab === 'activity' && <ActivityTab stats={stats} />}
+        {selectedTab === 'database' && <DatabaseManager />}
       </div>
     </div>
   );
