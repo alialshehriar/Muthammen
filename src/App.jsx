@@ -9,7 +9,7 @@ import Register from './pages/Register';
 import AdminDashboard from './pages/AdminDashboard';
 import AdminLogin from './pages/AdminLogin';
 import MarketStudy from './market/MarketStudy';
-import EnhancedProfessionalMap from "./map/CleanMap";
+import ComingSoonMap from "./map/ComingSoon";
 import { calculatePropertyValue } from './lib/aiEngine';
 import { evaluateWithGPT, API_CONFIG, getHistoryStats, clearHistory } from './lib/apiConfig';
 import useRefCapture from './hooks/useRefCapture';
@@ -133,7 +133,7 @@ function App() {
   }
 
   if (currentPage === 'map') {
-    return <EnhancedProfessionalMap />;
+    return <ComingSoonMap onBack={() => setCurrentPage('home')} />;
   }
 
   if (currentPage === 'register') {
