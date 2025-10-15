@@ -1,0 +1,49 @@
+{
+  "note": "بيانات تجريبية - المساحات الخضراء والحدائق",
+  "version": "2025Q4",
+  "districts": {
+    "riyadh_olaya": {
+      "parks_count": 8,
+      "total_green_area_m2": 125000,
+      "green_coverage_percent": 12,
+      "avg_distance_to_park_m": 420,
+      "greenery_score": 88
+    },
+    "riyadh_malqa": {
+      "parks_count": 12,
+      "total_green_area_m2": 185000,
+      "green_coverage_percent": 15,
+      "avg_distance_to_park_m": 350,
+      "greenery_score": 92
+    },
+    "riyadh_narjis": {
+      "parks_count": 10,
+      "total_green_area_m2": 160000,
+      "green_coverage_percent": 14,
+      "avg_distance_to_park_m": 380,
+      "greenery_score": 90
+    },
+    "jeddah_rawdah": {
+      "parks_count": 9,
+      "total_green_area_m2": 140000,
+      "green_coverage_percent": 13,
+      "avg_distance_to_park_m": 400,
+      "greenery_score": 89
+    },
+    "jeddah_salamah": {
+      "parks_count": 11,
+      "total_green_area_m2": 170000,
+      "green_coverage_percent": 14,
+      "avg_distance_to_park_m": 360,
+      "greenery_score": 91
+    },
+    "dammam_faisaliyah": {
+      "parks_count": 7,
+      "total_green_area_m2": 110000,
+      "green_coverage_percent": 11,
+      "avg_distance_to_park_m": 450,
+      "greenery_score": 85
+    }
+  }
+}
+

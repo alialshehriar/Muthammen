@@ -1,0 +1,99 @@
+{
+  "type": "FeatureCollection",
+  "note": "بيانات أسعار البيع التجريبية - ريال/م²",
+  "version": "2025Q4",
+  "updated_at": "2025-10-13",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "district": "العليا",
+        "city": "الرياض",
+        "price_per_sqm": 6800,
+        "samples": 27,
+        "confidence": 82,
+        "trend": "stable"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [46.6753, 24.7136]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "district": "الملقا",
+        "city": "الرياض",
+        "price_per_sqm": 6200,
+        "samples": 34,
+        "confidence": 85,
+        "trend": "rising"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [46.6234, 24.7743]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "district": "النرجس",
+        "city": "الرياض",
+        "price_per_sqm": 5800,
+        "samples": 29,
+        "confidence": 80,
+        "trend": "rising"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [46.7234, 24.8143]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "district": "الروضة",
+        "city": "جدة",
+        "price_per_sqm": 6000,
+        "samples": 31,
+        "confidence": 83,
+        "trend": "stable"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [39.1653, 21.5811]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "district": "السلامة",
+        "city": "جدة",
+        "price_per_sqm": 6400,
+        "samples": 28,
+        "confidence": 84,
+        "trend": "rising"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [39.1953, 21.6211]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "district": "الفيصلية",
+        "city": "الدمام",
+        "price_per_sqm": 4900,
+        "samples": 22,
+        "confidence": 78,
+        "trend": "stable"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [50.1088, 26.4207]
+      }
+    }
+  ]
+}
+

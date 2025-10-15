@@ -1,0 +1,49 @@
+{
+  "note": "بيانات تجريبية - سهولة النفاذ للطرق الرئيسية",
+  "version": "2025Q4",
+  "districts": {
+    "riyadh_olaya": {
+      "main_roads_count": 4,
+      "avg_distance_to_main_road_m": 350,
+      "highway_exits_within_5km": 3,
+      "avg_street_width_m": 18,
+      "accessibility_score": 95
+    },
+    "riyadh_malqa": {
+      "main_roads_count": 5,
+      "avg_distance_to_main_road_m": 280,
+      "highway_exits_within_5km": 4,
+      "avg_street_width_m": 20,
+      "accessibility_score": 92
+    },
+    "riyadh_narjis": {
+      "main_roads_count": 3,
+      "avg_distance_to_main_road_m": 420,
+      "highway_exits_within_5km": 2,
+      "avg_street_width_m": 16,
+      "accessibility_score": 88
+    },
+    "jeddah_rawdah": {
+      "main_roads_count": 4,
+      "avg_distance_to_main_road_m": 300,
+      "highway_exits_within_5km": 3,
+      "avg_street_width_m": 19,
+      "accessibility_score": 93
+    },
+    "jeddah_salamah": {
+      "main_roads_count": 5,
+      "avg_distance_to_main_road_m": 250,
+      "highway_exits_within_5km": 4,
+      "avg_street_width_m": 21,
+      "accessibility_score": 94
+    },
+    "dammam_faisaliyah": {
+      "main_roads_count": 3,
+      "avg_distance_to_main_road_m": 400,
+      "highway_exits_within_5km": 2,
+      "avg_street_width_m": 17,
+      "accessibility_score": 85
+    }
+  }
+}
+

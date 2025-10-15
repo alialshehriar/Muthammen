@@ -1,0 +1,366 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "region": "الرياض",
+        "city": "الرياض",
+        "district": "العليا",
+        "avgPrice": 4200,
+        "pricePerSqm": 3800,
+        "trend": "صاعد",
+        "growth": 8.5,
+        "sampleSize": 450,
+        "confidence": 92,
+        "propertyTypes": ["شقة", "فيلا", "دوبلكس"],
+        "amenities": ["مولات", "مدارس", "مستشفيات", "مطاعم"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [46.6753, 24.7136]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "region": "الرياض",
+        "city": "الرياض",
+        "district": "الملقا",
+        "avgPrice": 3900,
+        "pricePerSqm": 3500,
+        "trend": "صاعد",
+        "growth": 7.2,
+        "sampleSize": 380,
+        "confidence": 88,
+        "propertyTypes": ["شقة", "فيلا"],
+        "amenities": ["مدارس", "مستشفيات", "حدائق"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [46.6850, 24.7500]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "region": "الرياض",
+        "city": "الرياض",
+        "district": "النرجس",
+        "avgPrice": 3600,
+        "pricePerSqm": 3200,
+        "trend": "مستقر",
+        "growth": 3.1,
+        "sampleSize": 320,
+        "confidence": 85,
+        "propertyTypes": ["شقة", "فيلا", "استوديو"],
+        "amenities": ["مدارس", "مساجد", "أسواق"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [46.7200, 24.7700]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "region": "مكة المكرمة",
+        "city": "جدة",
+        "district": "الروضة",
+        "avgPrice": 3800,
+        "pricePerSqm": 3400,
+        "trend": "صاعد",
+        "growth": 6.8,
+        "sampleSize": 420,
+        "confidence": 90,
+        "propertyTypes": ["شقة", "فيلا"],
+        "amenities": ["كورنيش", "مولات", "مطاعم", "مدارس"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [39.1748, 21.5810]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "region": "مكة المكرمة",
+        "city": "جدة",
+        "district": "الزهراء",
+        "avgPrice": 3500,
+        "pricePerSqm": 3100,
+        "trend": "مستقر",
+        "growth": 4.2,
+        "sampleSize": 350,
+        "confidence": 87,
+        "propertyTypes": ["شقة", "دوبلكس"],
+        "amenities": ["مدارس", "مستشفيات", "أسواق"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [39.1950, 21.5950]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "region": "مكة المكرمة",
+        "city": "مكة المكرمة",
+        "district": "العزيزية",
+        "avgPrice": 4500,
+        "pricePerSqm": 4000,
+        "trend": "صاعد",
+        "growth": 12.5,
+        "sampleSize": 280,
+        "confidence": 82,
+        "propertyTypes": ["شقة", "برج"],
+        "amenities": ["الحرم", "مولات", "فنادق"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [39.8579, 21.4225]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "region": "المنطقة الشرقية",
+        "city": "الدمام",
+        "district": "الفيصلية",
+        "avgPrice": 3200,
+        "pricePerSqm": 2800,
+        "trend": "صاعد",
+        "growth": 5.5,
+        "sampleSize": 310,
+        "confidence": 84,
+        "propertyTypes": ["شقة", "فيلا"],
+        "amenities": ["كورنيش", "مدارس", "مستشفيات"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [50.1040, 26.4207]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "region": "المنطقة الشرقية",
+        "city": "الخبر",
+        "district": "الكورنيش",
+        "avgPrice": 3400,
+        "pricePerSqm": 3000,
+        "trend": "صاعد",
+        "growth": 6.2,
+        "sampleSize": 290,
+        "confidence": 86,
+        "propertyTypes": ["شقة", "فيلا", "برج"],
+        "amenities": ["كورنيش", "مولات", "مطاعم"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [50.2084, 26.2172]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "region": "المدينة المنورة",
+        "city": "المدينة المنورة",
+        "district": "العزيزية",
+        "avgPrice": 3700,
+        "pricePerSqm": 3300,
+        "trend": "صاعد",
+        "growth": 8.8,
+        "sampleSize": 260,
+        "confidence": 80,
+        "propertyTypes": ["شقة", "فيلا"],
+        "amenities": ["المسجد النبوي", "مولات", "مدارس"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [39.6142, 24.4672]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "region": "القصيم",
+        "city": "بريدة",
+        "district": "الصفراء",
+        "avgPrice": 2800,
+        "pricePerSqm": 2400,
+        "trend": "مستقر",
+        "growth": 3.5,
+        "sampleSize": 180,
+        "confidence": 75,
+        "propertyTypes": ["شقة", "فيلا"],
+        "amenities": ["مدارس", "أسواق", "مساجد"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [43.9750, 26.3260]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "region": "عسير",
+        "city": "أبها",
+        "district": "الربوة",
+        "avgPrice": 2900,
+        "pricePerSqm": 2500,
+        "trend": "صاعد",
+        "growth": 7.5,
+        "sampleSize": 150,
+        "confidence": 72,
+        "propertyTypes": ["شقة", "فيلا", "شاليه"],
+        "amenities": ["جبال", "منتزهات", "مدارس"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [42.5053, 18.2164]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "region": "تبوك",
+        "city": "تبوك",
+        "district": "السليمانية",
+        "avgPrice": 2600,
+        "pricePerSqm": 2200,
+        "trend": "مستقر",
+        "growth": 2.8,
+        "sampleSize": 120,
+        "confidence": 68,
+        "propertyTypes": ["شقة", "فيلا"],
+        "amenities": ["مدارس", "مستشفيات", "أسواق"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [36.5550, 28.3838]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "region": "حائل",
+        "city": "حائل",
+        "district": "المطار",
+        "avgPrice": 2500,
+        "pricePerSqm": 2100,
+        "trend": "مستقر",
+        "growth": 2.2,
+        "sampleSize": 110,
+        "confidence": 65,
+        "propertyTypes": ["شقة", "فيلا"],
+        "amenities": ["مدارس", "أسواق", "مساجد"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [41.6900, 27.5236]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "region": "الجوف",
+        "city": "سكاكا",
+        "district": "الملك فهد",
+        "avgPrice": 2400,
+        "pricePerSqm": 2000,
+        "trend": "مستقر",
+        "growth": 1.8,
+        "sampleSize": 95,
+        "confidence": 62,
+        "propertyTypes": ["شقة", "فيلا"],
+        "amenities": ["مدارس", "مستشفيات"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [40.2062, 29.9697]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "region": "جازان",
+        "city": "جازان",
+        "district": "الكورنيش",
+        "avgPrice": 2700,
+        "pricePerSqm": 2300,
+        "trend": "صاعد",
+        "growth": 5.2,
+        "sampleSize": 130,
+        "confidence": 70,
+        "propertyTypes": ["شقة", "فيلا"],
+        "amenities": ["كورنيش", "مدارس", "أسواق"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [42.5511, 16.8892]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "region": "نجران",
+        "city": "نجران",
+        "district": "الفيصلية",
+        "avgPrice": 2550,
+        "pricePerSqm": 2150,
+        "trend": "مستقر",
+        "growth": 2.5,
+        "sampleSize": 100,
+        "confidence": 64,
+        "propertyTypes": ["شقة", "فيلا"],
+        "amenities": ["مدارس", "مستشفيات", "أسواق"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [44.2272, 17.4924]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "region": "الباحة",
+        "city": "الباحة",
+        "district": "الزهراء",
+        "avgPrice": 2650,
+        "pricePerSqm": 2250,
+        "trend": "مستقر",
+        "growth": 3.2,
+        "sampleSize": 90,
+        "confidence": 60,
+        "propertyTypes": ["شقة", "فيلا", "شاليه"],
+        "amenities": ["جبال", "منتزهات", "مدارس"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [41.4677, 20.0129]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "region": "الحدود الشمالية",
+        "city": "عرعر",
+        "district": "المطار",
+        "avgPrice": 2350,
+        "pricePerSqm": 1950,
+        "trend": "مستقر",
+        "growth": 1.5,
+        "sampleSize": 85,
+        "confidence": 58,
+        "propertyTypes": ["شقة", "فيلا"],
+        "amenities": ["مدارس", "مستشفيات"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [41.0381, 30.9753]
+      }
+    }
+  ]
+}
+

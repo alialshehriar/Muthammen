@@ -1,0 +1,55 @@
+{
+  "note": "بيانات تجريبية - الشرائح السعرية حسب الحي",
+  "version": "2025Q4",
+  "districts": {
+    "riyadh_olaya": {
+      "p25": 5200,
+      "p50": 6800,
+      "p75": 8500,
+      "p90": 10200,
+      "percentile_rank": 90,
+      "wealth_indicator": "مرتفع جداً"
+    },
+    "riyadh_malqa": {
+      "p25": 4800,
+      "p50": 6200,
+      "p75": 7800,
+      "p90": 9400,
+      "percentile_rank": 85,
+      "wealth_indicator": "مرتفع"
+    },
+    "riyadh_narjis": {
+      "p25": 4500,
+      "p50": 5800,
+      "p75": 7200,
+      "p90": 8600,
+      "percentile_rank": 80,
+      "wealth_indicator": "مرتفع"
+    },
+    "jeddah_rawdah": {
+      "p25": 4600,
+      "p50": 6000,
+      "p75": 7500,
+      "p90": 9000,
+      "percentile_rank": 83,
+      "wealth_indicator": "مرتفع"
+    },
+    "jeddah_salamah": {
+      "p25": 4900,
+      "p50": 6400,
+      "p75": 8000,
+      "p90": 9600,
+      "percentile_rank": 87,
+      "wealth_indicator": "مرتفع جداً"
+    },
+    "dammam_faisaliyah": {
+      "p25": 3800,
+      "p50": 4900,
+      "p75": 6100,
+      "p90": 7300,
+      "percentile_rank": 70,
+      "wealth_indicator": "متوسط-مرتفع"
+    }
+  }
+}
+

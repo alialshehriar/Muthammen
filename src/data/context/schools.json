@@ -1,0 +1,55 @@
+{
+  "note": "بيانات تجريبية - المؤسسات التعليمية",
+  "version": "2025Q4",
+  "districts": {
+    "riyadh_olaya": {
+      "schools_count": 12,
+      "private_schools": 8,
+      "public_schools": 4,
+      "universities_nearby": 2,
+      "avg_distance_to_school_m": 650,
+      "education_score": 90
+    },
+    "riyadh_malqa": {
+      "schools_count": 18,
+      "private_schools": 12,
+      "public_schools": 6,
+      "universities_nearby": 1,
+      "avg_distance_to_school_m": 550,
+      "education_score": 94
+    },
+    "riyadh_narjis": {
+      "schools_count": 15,
+      "private_schools": 10,
+      "public_schools": 5,
+      "universities_nearby": 1,
+      "avg_distance_to_school_m": 600,
+      "education_score": 92
+    },
+    "jeddah_rawdah": {
+      "schools_count": 14,
+      "private_schools": 9,
+      "public_schools": 5,
+      "universities_nearby": 2,
+      "avg_distance_to_school_m": 620,
+      "education_score": 91
+    },
+    "jeddah_salamah": {
+      "schools_count": 16,
+      "private_schools": 11,
+      "public_schools": 5,
+      "universities_nearby": 1,
+      "avg_distance_to_school_m": 580,
+      "education_score": 93
+    },
+    "dammam_faisaliyah": {
+      "schools_count": 10,
+      "private_schools": 6,
+      "public_schools": 4,
+      "universities_nearby": 1,
+      "avg_distance_to_school_m": 700,
+      "education_score": 87
+    }
+  }
+}
+
