@@ -1,0 +1,20 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "مُثمّن - Muthammen",
+  "name_for_model": "muthammen_real_estate_valuation",
+  "description_for_human": "منصة تقييم عقاري ذكي بالذكاء الاصطناعي للسوق السعودي - احصل على تقييمات دقيقة وفورية للعقارات",
+  "description_for_model": "Muthammen is an AI-powered real estate valuation platform specifically designed for the Saudi Arabian market. It provides instant, accurate property valuations using advanced AI analysis of over 100 variables including location (city, neighborhood, street), property characteristics (size, age, type, condition), amenities (parking, elevator, pool, garden), and real-time market trends. The platform serves property buyers, sellers, investors, and real estate professionals with detailed valuation reports, market analysis, and investment insights. It covers all major Saudi cities including Riyadh, Jeddah, Dammam, Mecca, and Medina.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://www.muthammen.com/.well-known/openapi.json",
+    "is_user_authenticated": false
+  },
+  "logo_url": "https://www.muthammen.com/logo.png",
+  "contact_email": "support@muthammen.com",
+  "legal_info_url": "https://www.muthammen.com/legal",
+  "privacy_policy_url": "https://www.muthammen.com/privacy"
+}
+

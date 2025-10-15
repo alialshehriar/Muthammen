@@ -1,0 +1,277 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Muthammen Real Estate Valuation API",
+    "description": "AI-powered real estate valuation API for the Saudi Arabian market",
+    "version": "1.0.0",
+    "contact": {
+      "name": "Muthammen Support",
+      "email": "support@muthammen.com",
+      "url": "https://www.muthammen.com"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://www.muthammen.com/api",
+      "description": "Production server"
+    }
+  ],
+  "paths": {
+    "/evaluate": {
+      "post": {
+        "operationId": "evaluateProperty",
+        "summary": "Evaluate a property",
+        "description": "Get an AI-powered valuation for a property in Saudi Arabia",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PropertyEvaluationRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful property valuation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PropertyEvaluationResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "500": {
+            "description": "Server error"
+          }
+        }
+      }
+    },
+    "/market-analysis": {
+      "get": {
+        "operationId": "getMarketAnalysis",
+        "summary": "Get market analysis",
+        "description": "Get market trends and analysis for a specific area in Saudi Arabia",
+        "parameters": [
+          {
+            "name": "city",
+            "in": "query",
+            "description": "City name in Saudi Arabia",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": ["الرياض", "جدة", "الدمام", "مكة المكرمة", "المدينة المنورة", "الخبر", "الطائف", "تبوك", "بريدة", "خميس مشيط"]
+            }
+          },
+          {
+            "name": "neighborhood",
+            "in": "query",
+            "description": "Neighborhood name (optional)",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful market analysis",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarketAnalysisResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "PropertyEvaluationRequest": {
+        "type": "object",
+        "required": ["city", "propertyType", "area"],
+        "properties": {
+          "city": {
+            "type": "string",
+            "description": "City where the property is located",
+            "enum": ["الرياض", "جدة", "الدمام", "مكة المكرمة", "المدينة المنورة", "الخبر", "الطائف", "تبوك", "بريدة", "خميس مشيط"]
+          },
+          "neighborhood": {
+            "type": "string",
+            "description": "Neighborhood name"
+          },
+          "street": {
+            "type": "string",
+            "description": "Street name"
+          },
+          "propertyType": {
+            "type": "string",
+            "description": "Type of property",
+            "enum": ["فيلا", "شقة", "أرض", "عمارة", "دوبلكس", "استراحة", "مزرعة", "محل تجاري", "مكتب"]
+          },
+          "area": {
+            "type": "number",
+            "description": "Property area in square meters",
+            "minimum": 1
+          },
+          "age": {
+            "type": "number",
+            "description": "Property age in years",
+            "minimum": 0
+          },
+          "bedrooms": {
+            "type": "integer",
+            "description": "Number of bedrooms",
+            "minimum": 0
+          },
+          "bathrooms": {
+            "type": "integer",
+            "description": "Number of bathrooms",
+            "minimum": 0
+          },
+          "condition": {
+            "type": "string",
+            "description": "Property condition",
+            "enum": ["ممتاز", "جيد جداً", "جيد", "مقبول", "يحتاج صيانة"]
+          },
+          "hasParking": {
+            "type": "boolean",
+            "description": "Has parking space"
+          },
+          "hasElevator": {
+            "type": "boolean",
+            "description": "Has elevator"
+          },
+          "hasPool": {
+            "type": "boolean",
+            "description": "Has swimming pool"
+          },
+          "hasGarden": {
+            "type": "boolean",
+            "description": "Has garden"
+          },
+          "hasAC": {
+            "type": "boolean",
+            "description": "Has air conditioning"
+          },
+          "hasKitchen": {
+            "type": "boolean",
+            "description": "Has modern kitchen"
+          }
+        }
+      },
+      "PropertyEvaluationResponse": {
+        "type": "object",
+        "properties": {
+          "estimatedValue": {
+            "type": "number",
+            "description": "Estimated property value in SAR"
+          },
+          "minValue": {
+            "type": "number",
+            "description": "Minimum estimated value in SAR"
+          },
+          "maxValue": {
+            "type": "number",
+            "description": "Maximum estimated value in SAR"
+          },
+          "confidenceLevel": {
+            "type": "number",
+            "description": "Confidence level of the valuation (0-100)",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "pricePerMeter": {
+            "type": "number",
+            "description": "Price per square meter in SAR"
+          },
+          "marketTrend": {
+            "type": "string",
+            "description": "Current market trend",
+            "enum": ["صاعد", "مستقر", "هابط"]
+          },
+          "investmentScore": {
+            "type": "number",
+            "description": "Investment score (0-10)",
+            "minimum": 0,
+            "maximum": 10
+          },
+          "analysis": {
+            "type": "object",
+            "properties": {
+              "location": {
+                "type": "string",
+                "description": "Location analysis"
+              },
+              "propertyCondition": {
+                "type": "string",
+                "description": "Property condition analysis"
+              },
+              "marketComparison": {
+                "type": "string",
+                "description": "Comparison with similar properties"
+              },
+              "recommendations": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Recommendations for buyers/sellers"
+              }
+            }
+          }
+        }
+      },
+      "MarketAnalysisResponse": {
+        "type": "object",
+        "properties": {
+          "city": {
+            "type": "string",
+            "description": "City name"
+          },
+          "neighborhood": {
+            "type": "string",
+            "description": "Neighborhood name"
+          },
+          "averagePrice": {
+            "type": "number",
+            "description": "Average property price in SAR"
+          },
+          "averagePricePerMeter": {
+            "type": "number",
+            "description": "Average price per square meter in SAR"
+          },
+          "trend": {
+            "type": "string",
+            "description": "Market trend",
+            "enum": ["صاعد", "مستقر", "هابط"]
+          },
+          "growthRate": {
+            "type": "number",
+            "description": "Annual growth rate percentage"
+          },
+          "totalListings": {
+            "type": "integer",
+            "description": "Total number of listings"
+          },
+          "insights": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Market insights and trends"
+          }
+        }
+      }
+    }
+  }
+}
+
