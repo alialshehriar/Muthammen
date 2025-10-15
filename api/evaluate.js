@@ -8,6 +8,7 @@ export default async function handler(req, res) {
 
   try {
     const formData = req.body;
+    const userId = req.headers['x-user-id'] || null; // معرف المستخدم من header
     
     // التحقق من البيانات الأساسية
     if (!formData.area || !formData.city || !formData.district) {
@@ -26,6 +27,7 @@ export default async function handler(req, res) {
     // 2. حفظ التقييم في قاعدة البيانات
     const savedEvaluation = await sql`
       INSERT INTO evaluations (
+        user_id,
         property_data,
         estimated_price,
         price_range_min,
@@ -34,6 +36,7 @@ export default async function handler(req, res) {
         ai_analysis,
         created_at
       ) VALUES (
+        ${userId},
         ${JSON.stringify(formData)},
         ${evaluation.estimatedPrice},
         ${evaluation.priceRange.min},
@@ -42,8 +45,29 @@ export default async function handler(req, res) {
         ${JSON.stringify(evaluation.analysis)},
         NOW()
       )
-      RETURNING id, estimated_price, price_range_min, price_range_max, confidence_score
+      RETURNING evaluation_id, estimated_price, price_range_min, price_range_max, confidence_score
     `;
+
+    // 3. تسجيل النشاط إذا كان المستخدم مسجل دخول
+    if (userId) {
+      await sql`
+        INSERT INTO activity_log (
+          user_id,
+          action_type,
+          details
+        ) VALUES (
+          ${userId},
+          'property_evaluated',
+          ${JSON.stringify({
+            property_type: formData.propertyType,
+            city: formData.city,
+            district: formData.district,
+            area: formData.area,
+            estimated_price: evaluation.estimatedPrice
+          })}
+        )
+      `;
+    }
 
     // 3. إرجاع النتيجة
     return res.status(200).json({
