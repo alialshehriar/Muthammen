@@ -5,6 +5,7 @@
  */
 
 import { neon } from '@neondatabase/serverless';
+import bcrypt from 'bcryptjs';
 
 export default async function handler(req, res) {
   // Only allow POST requests
@@ -13,12 +14,19 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { name, email, phone, referredByCode } = req.body;
+    const { name, email, phone, password, referralCode } = req.body;
 
     // Validation
-    if (!name || !email || !phone) {
+    if (!name || !email || !phone || !password) {
       return res.status(400).json({ 
-        error: 'الرجاء إدخال جميع البيانات المطلوبة' 
+        error: 'جميع الحقول مطلوبة' 
+      });
+    }
+
+    // Password validation
+    if (password.length < 8) {
+      return res.status(400).json({ 
+        error: 'كلمة المرور يجب أن تكون 8 أحرف على الأقل' 
       });
     }
 
@@ -61,14 +69,21 @@ export default async function handler(req, res) {
       });
     }
 
-    // Generate unique referral code
-    const referralCode = generateReferralCode();
+    // Hash password
+    const hashedPassword = await bcrypt.hash(password, 10);
 
-    // Verify referredByCode if provided
+    // Generate unique referral code
+    const userReferralCode = generateReferralCode();
+
+    // Generate verification code
+    const verificationCode = generateVerificationCode();
+    const verificationExpiry = new Date(Date.now() + 15 * 60 * 1000); // 15 minutes
+
+    // Verify referralCode if provided
     let referrerId = null;
-    if (referredByCode) {
+    if (referralCode) {
       const referrer = await sql`
-        SELECT id FROM users WHERE referral_code = ${referredByCode} LIMIT 1
+        SELECT id FROM users WHERE referral_code = ${referralCode} LIMIT 1
       `;
       if (referrer.length > 0) {
         referrerId = referrer[0].id;
@@ -78,12 +93,14 @@ export default async function handler(req, res) {
     // Create user
     const newUser = await sql`
       INSERT INTO users (
-        name, email, phone, referral_code, referred_by_code,
-        subscription_type, subscription_expires_at
+        name, email, phone, password_hash, referral_code, referred_by_code,
+        subscription_type, subscription_expires_at, email_verified,
+        verification_code, verification_code_expiry
       )
       VALUES (
-        ${name}, ${email}, ${phone}, ${referralCode}, ${referredByCode || null},
-        'basic', ${new Date(Date.now() + 30 * 24 * 60 * 60 * 1000)}
+        ${name}, ${email}, ${phone}, ${hashedPassword}, ${userReferralCode}, ${referralCode || null},
+        'standard', ${new Date(Date.now() + 30 * 24 * 60 * 60 * 1000)}, false,
+        ${verificationCode}, ${verificationExpiry.toISOString()}
       )
       RETURNING id, name, email, phone, referral_code, subscription_type, subscription_expires_at, created_at
     `;
@@ -94,11 +111,14 @@ export default async function handler(req, res) {
     if (referrerId) {
       await sql`
         INSERT INTO referrals (referrer_id, referred_id, referral_code, reward_days)
-        VALUES (${referrerId}, ${user.id}, ${referredByCode}, 2)
+        VALUES (${referrerId}, ${user.id}, ${referralCode}, 2)
       `;
 
       // The trigger will automatically apply the reward
     }
+
+    // Send verification email
+    await sendVerificationEmail(email, verificationCode, name);
 
     // Log activity
     await sql`
@@ -114,17 +134,10 @@ export default async function handler(req, res) {
     // Return success with user data
     return res.status(201).json({
       success: true,
-      message: 'تم التسجيل بنجاح! حصلت على شهر مجاني من الباقة العادية',
-      user: {
-        id: user.id,
-        name: user.name,
-        email: user.email,
-        phone: user.phone,
-        referralCode: user.referral_code,
-        referralLink: `https://mothammen.ai/register?ref=${user.referral_code}`,
-        subscriptionType: user.subscription_type,
-        subscriptionExpiresAt: user.subscription_expires_at
-      }
+      message: 'تم إرسال رمز التحقق إلى بريدك الإلكتروني',
+      userId: user.id,
+      // في بيئة التطوير فقط، نرسل الرمز في الاستجابة
+      ...(process.env.NODE_ENV === 'development' && { verificationCode })
     });
 
   } catch (error) {
@@ -146,5 +159,31 @@ function generateReferralCode() {
     code += chars.charAt(Math.floor(Math.random() * chars.length));
   }
   return code;
+}
+
+/**
+ * Generate a 6-digit verification code
+ * @returns {string} - Verification code
+ */
+function generateVerificationCode() {
+  return Math.floor(100000 + Math.random() * 900000).toString();
+}
+
+/**
+ * Send verification email (mock - replace with real service)
+ * @param {string} email - User email
+ * @param {string} code - Verification code
+ * @param {string} name - User name
+ */
+async function sendVerificationEmail(email, code, name) {
+  // في الإنتاج، استخدم خدمة مثل SendGrid أو AWS SES
+  console.log(`📧 إرسال رمز التحقق إلى ${email}`);
+  console.log(`رمز التحقق: ${code}`);
+  console.log(`الاسم: ${name}`);
+  
+  // محاكاة إرسال البريد
+  // في الإنتاج، قم بإضافة كود الإرسال الفعلي هنا
+  
+  return true;
 }
 
