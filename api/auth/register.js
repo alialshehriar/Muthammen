@@ -72,64 +72,27 @@ export default async function handler(req, res) {
     // Hash password
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    // Generate unique referral code
-    const userReferralCode = generateReferralCode();
-
     // Generate verification code
     const verificationCode = generateVerificationCode();
     const verificationExpiry = new Date(Date.now() + 15 * 60 * 1000); // 15 minutes
 
-    // Verify referralCode if provided
-    let referrerId = null;
-    if (referralCode) {
-      const referrer = await sql`
-        SELECT id FROM users WHERE referral_code = ${referralCode} LIMIT 1
-      `;
-      if (referrer.length > 0) {
-        referrerId = referrer[0].id;
-      }
-    }
-
     // Create user
     const newUser = await sql`
       INSERT INTO users (
-        name, email, phone, password_hash, referral_code, referred_by_code,
-        subscription_type, subscription_expires_at, email_verified,
-        verification_code, verification_code_expiry
+        name, email, phone, password_hash,
+        email_verified, verification_code, verification_code_expiry
       )
       VALUES (
-        ${name}, ${email}, ${phone}, ${hashedPassword}, ${userReferralCode}, ${referralCode || null},
-        'standard', ${new Date(Date.now() + 30 * 24 * 60 * 60 * 1000)}, false,
-        ${verificationCode}, ${verificationExpiry.toISOString()}
+        ${name}, ${email}, ${phone}, ${hashedPassword},
+        false, ${verificationCode}, ${verificationExpiry.toISOString()}
       )
-      RETURNING id, name, email, phone, referral_code, subscription_type, subscription_expires_at, created_at
+      RETURNING id, name, email, phone, created_at
     `;
 
     const user = newUser[0];
 
-    // Create referral record if referred by someone
-    if (referrerId) {
-      await sql`
-        INSERT INTO referrals (referrer_id, referred_id, referral_code, reward_days)
-        VALUES (${referrerId}, ${user.id}, ${referralCode}, 2)
-      `;
-
-      // The trigger will automatically apply the reward
-    }
-
-    // Send verification email
+    // Send verification email (mock)
     await sendVerificationEmail(email, verificationCode, name);
-
-    // Log activity
-    await sql`
-      INSERT INTO activity_log (user_id, action, description, ip_address)
-      VALUES (
-        ${user.id}, 
-        'user_registered', 
-        'مستخدم جديد سجل في التطبيق',
-        ${req.headers['x-forwarded-for'] || req.connection.remoteAddress}
-      )
-    `;
 
     // Return success with user data
     return res.status(201).json({
