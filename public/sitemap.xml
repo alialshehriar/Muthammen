@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://muthammen.com/</loc>
+    <lastmod>2025-10-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://muthammen.com/" />
+  </url>
+
+  <!-- Evaluation Page -->
+  <url>
+    <loc>https://muthammen.com/evaluate</loc>
+    <lastmod>2025-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://muthammen.com/evaluate" />
+  </url>
+
+  <!-- Map Page -->
+  <url>
+    <loc>https://muthammen.com/map</loc>
+    <lastmod>2025-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://muthammen.com/map" />
+  </url>
+
+  <!-- Market Study Page -->
+  <url>
+    <loc>https://muthammen.com/market</loc>
+    <lastmod>2025-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://muthammen.com/market" />
+  </url>
+
+  <!-- Subscriptions Page -->
+  <url>
+    <loc>https://muthammen.com/subscriptions</loc>
+    <lastmod>2025-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://muthammen.com/subscriptions" />
+  </url>
+
+  <!-- Referrals Page -->
+  <url>
+    <loc>https://muthammen.com/referrals</loc>
+    <lastmod>2025-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://muthammen.com/referrals" />
+  </url>
+
+  <!-- Settings Page -->
+  <url>
+    <loc>https://muthammen.com/settings</loc>
+    <lastmod>2025-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://muthammen.com/settings" />
+  </url>
+
+  <!-- Register Page -->
+  <url>
+    <loc>https://muthammen.com/register</loc>
+    <lastmod>2025-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://muthammen.com/register" />
+  </url>
+
+</urlset>
+

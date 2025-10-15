@@ -7,6 +7,7 @@ import ResultDisplay from './components/ResultDisplay';
 import Subscriptions from './pages/Subscriptions';
 import Referrals from './pages/Referrals';
 import Register from './pages/Register';
+import Settings from './pages/Settings';
 import AdminDashboard from './pages/AdminDashboard';
 import AdminLogin from './pages/AdminLogin';
 import MarketStudy from './market/MarketStudy';
@@ -132,6 +133,16 @@ function App() {
 
   if (currentPage === 'register') {
     return <Register />;
+  }
+
+  if (currentPage === 'settings') {
+    return (
+      <>
+        <Header currentPage={currentPage} navigateTo={navigateTo} />
+        <Settings />
+        <Footer />
+      </>
+    );
   }
 
   if (currentPage === 'admin') {
